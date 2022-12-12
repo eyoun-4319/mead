@@ -1,0 +1,1435 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.logo {
+	float: right;
+	width: 150px;
+	margin-top: 25px;
+	margin-right: 15px;
+}
+
+
+
+
+
+
+@media (min-width: 320px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 100px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 75%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 40%;
+		font-size: 1.2rem;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.1rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 150px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+
+
+
+@media (min-width: 414px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 100px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 75%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 34%;
+		font-size: 1.2rem;
+		text-align: center;
+		letter-spacing: 2px;
+		color: brown;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.1rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 150px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+
+@media (min-width: 480px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 150px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 75%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 30%;
+		font-size: 1.2rem;
+		text-align: center;
+		letter-spacing: 2px;
+		color: brown;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.1rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 150px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+
+
+@media (min-width: 768px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 150px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 50%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 20%;
+		font-size: 1.5rem;
+		text-align: center;
+		letter-spacing: 2px;
+		color: brown;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-size: 2.2rem;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.3rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 200px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+@media (min-width: 1100px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 200px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 50%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 13%;
+		text-align: center;
+		letter-spacing: 2px;
+		font-size: 1.7rem;
+		color: brown;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-size: 2.5rem;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.3rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 200px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+
+@media (min-width: 1382px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: white;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	.header {
+		padding-top: 5rem;	
+	}
+	
+	.headerOne {
+		text-align: center;
+		font-size: 1.7rem;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		text-shadow: 10px black;
+	}
+	.regularGlass {
+		width: 250px;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+	}
+	
+	.recipeContainer {
+		background-color:lightgray;
+		width: 50%;
+		height: 150px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 5rem;
+	}
+	
+	.recipe {
+		padding-top: 10%;
+		text-align: center;
+		letter-spacing: 2px;
+		font-size: 2rem;
+	}
+	
+	.blank{
+		padding: 3rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 100px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-size: 3rem;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.4rem;
+		padding-top: 25px;
+	}
+	
+	.mead {
+		width: 200px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  100px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.1rem;
+	}
+	
+	.space {
+		margin-top: 25px;
+	}
+	
+}
+
+
+
+
+
+
+@media (min-width: 1550px) {
+	
+	.logo {
+		float: right;
+		width: 75px;
+		margin-top: 25px;
+		margin-right: 15px;
+	}
+	
+	
+	#menuToggle {
+		display: block;
+		position: relative;
+		top: 50px;
+		left: 40px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	#menuToggle a {
+		text-decoration: none;
+		color: black;
+		transition: color 0.3s ease;
+	}
+
+	#menuToggle a:hover {
+		color: tomato;
+	}
+	
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	#menuToggle span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: black;
+		border-radius: 3px;
+		z-index: 1;
+		transform-orgin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;
+	}
+	
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+	
+	#menuToggle input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #232323;
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	#menuToggle input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(10px, -2px);
+	}
+	
+	#menu {
+		position: absolute;
+		width: 300px;
+		margin: -100px 0 0 -50px;
+		padding: 50px;
+		padding-top: 125px;
+		background: antiquewhite;
+		list-style-type: none;
+		-webkit-font-smoothing:antialiiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+	
+	#menu li {
+		padding: 10px 0;
+		color: black;
+		font-size: 1.7rem;
+	}
+	
+	#menu li:hover {
+		color: brown;
+	}
+	
+	#menuToggle input:checked ~ ul {
+		transform: none;
+	}
+	
+	
+	.header {
+		padding-top: 10rem;
+		padding-bottom: 3rem;
+	}
+	
+	.generatorHeader {
+		text-align: center;
+	}
+	
+	.regularGlass {
+		width: 250px;
+		height: 450px;
+		padding-top: 0rem;
+		padding-bottom: 5rem;
+		display: block;
+		margin-left: 43%;
+		cursor: pointer;
+	}
+	
+	
+	
+	.recipeContainer {
+		background-color:lightgrey;
+		width: 50%;
+		height: 200px;
+		font-size: 1.3rem;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 0rem;
+	}
+	
+	.recipe {
+		padding-top: 10%;
+		font-size: 1.5rem;
+		text-align: center;
+		letter-spacing: 2px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		color: brown;
+	}
+	
+	.blank {
+		padding-top: 10rem;
+	}
+	
+	.color {
+		width: 100%;
+		height: 200px;
+		background-color:antiquewhite;
+	}
+	
+	.what h1 {
+		padding-top: 25px;
+		text-align: center;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-size: 3rem;
+	}
+	
+	.what p {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		margin-left: 25rem;
+		margin-right: 25rem;;
+		font-size: 1.5rem;
+		padding-top: 25px;
+		text-align: left;
+	}
+	
+	.mead {
+		width: 300px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:  750px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0 ,0 , 0.19);
+	}
+	
+	.what h3 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-style: italic;
+		font-weight: bold;
+		margin-left: 25rem;
+		font-size: 1.7rem;
+	}
+	
+	.what li {
+		font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		font-size: 1.3rem;
+		margin-left: 25rem;
+	}
+	
+	.what ul {
+		padding-bottom: 5rem;
+	}
+	
+	.space {
+		margin-top: 5rem;
+	}
+	
+}
+
